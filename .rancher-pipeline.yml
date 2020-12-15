@@ -1,0 +1,10 @@
+stages:
+- name: 发布
+  steps:
+  - applyAppConfig:
+      catalogTemplate: cattle-global-data:devops-harbor-redis
+      version: 1.0.1
+      name: redis
+      targetNamespace: default
+timeout: 60
+notification: {}
